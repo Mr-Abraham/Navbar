@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: 350ms ease;
+}
+nav{
+    height: 10vh;
+    background: linear-gradient(to left, hsl(200,80%,20%),#333)
+}
+.navlinks{
+    width: 50%;
+    display: flex;
+    list-style: none;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+}
+
+.navlinks li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.landing{
+    background: linear-gradient(to left, hsl(212,1%,98%), #fff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.landing img{
+    width: 40%;
+}
+.wrapper{
+    /* border: 1px solid red; */
+    margin: 1em;
+    padding: 1em;
+    margin-bottom: 160px;
+    position: relative;
+}
+.wrapper h1{
+    font-size: 50px;
+    color: #ae5fce;
+    font-family: 'Poppins', sans-serif;
+    margin: .7em auto;
+    width:  70%;
+}
+.wrapper p{
+    font-size: 1em;
+    line-height: 1.6;
+    width: 70%;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+    color: hsl(212, 75%, 24%);
+}
+.wrapper a{
+    width: 15%;
+    position: absolute;
+    text-align: center;
+    position: relative;
+    left: 100px;
+    top: 30px;
+    font-size: 1.2em;
+    letter-spacing: 1.5px;
+    padding: .5em 1em;
+    border-radius: 80px;
+
+}
+.wrapper a:hover{
+    width: 15%;
+    position: absolute;
+    text-align: center;
+    position: relative;
+    left: 110px;
+    top: 30px;
+    font-size: 1.2em;
+    letter-spacing: 1.5px;
+    padding: .5em 1em;
+    border-radius: 80px;
+    background: linear-gradient(to left, hsl(200,80%,20%),#333);
+    color: #FFF;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 750px){
+   
+     .line{
+         width: 30px;
+         height: 2px;
+         background: #fff;
+         margin: 5px;
+        
+     }
+     nav{
+         position: relative;
+     }
+     .hamburger{
+         position: fixed;
+         top: 5%;
+         right: 5%;
+         transform:translate(-5%,-50%);
+         cursor: pointer;
+         z-index: 12;
+     }
+  
+    .navlinks{
+        position: fixed;
+        background: #5b78c7;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+         clip-path: circle(100px at 90% -6%);
+         -webkit-clip-path: circle(100px at 90% -6%);
+         transition: all .61s ease-out;
+    }
+    .navlinks.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        z-index: 11;
+       
+    }
+    .landing{
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapper{
+        margin: 0;
+        padding: 5em;
+        /* margin-bottom: 0px; */
+    }
+    .landing img{
+        margin: auto;
+        width: 70%;
+        height: 30%;
+        object-fit: cover;
+    }
+    .wrapper h1,
+    .wrapper p{
+        margin: .2em auto;
+        padding: 0;
+        font-size: 1em;
+        width: 100%;
+    }
+    .wrapper a{
+        margin: auto;
+        left: -20px;
+    }
+
+     .navlinks li{
+     opacity: 0;
+     transform: translateY(50px);
+     }
+     .navlinks li a{
+         font-size: 25px;
+     }
+     .navlinks li:nth-child(1){
+       transition: all 1s ease .2s;
+     }
+     .navlinks li:nth-child(2){
+        transition: all .5s ease .4s;
+    }
+         .navlinks li:nth-child(3){
+        transition: all .5s ease .6s;
+    }
+    li.fade{
+        opacity: 1;
+        transform: translate(0);
+    }
+
+    .l1,
+    .l2,
+    .l3{
+        transform: rotate(0);
+        transition: .5s ease;
+    }
+.line.active{
+    transform: rotate(60deg);
+    transform-origin: center;
+    transition: 450ms ease;
+    
+}
+.line1{
+    transform: rotate(-140deg) ;
+    transition: .5s ease;
+    transform-origin: bottom;
+}
+.line3{
+    display: none;
+}
+
+.line2{
+    transform: rotate(120deg);
+    transition: .5s ease;
+    transform-origin: top;
+}
+.wrapper a:hover{
+    left: 10px;
+}
+}
+
+img{
+    max-width: 100%;
+}
+
+@media (max-width: 400px){
+    .wrapper{
+        padding: 1em;
+        margin-bottom: 2em ;
+    }
+    .landing img{
+        width: 100%;
+    }
+
+}
